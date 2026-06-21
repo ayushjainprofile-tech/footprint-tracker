@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useUser } from './context/UserContext';
 import OnboardingQuiz from './pages/OnboardingQuiz';
 import Dashboard from './pages/Dashboard';
@@ -12,7 +12,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="app-layout">
         <header style={{ padding: '1rem', borderBottom: '1px solid var(--border-color)', marginBottom: '2rem' }}>
           <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0' }}>
@@ -34,7 +34,7 @@ function App() {
           </Routes>
         </main>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
